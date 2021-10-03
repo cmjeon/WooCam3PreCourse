@@ -9,7 +9,7 @@ import java.util.function.Predicate;
 public class StringClass {
 	
 	/*
-	 * String 을 Array 로 분리하는 메소드
+	 * String 을 Array 로 분리하여 리턴하는 메소드
 	 */
 	public List<String> separateStringToArray(String str) {
 		List<String> result = new ArrayList<String>();
@@ -18,14 +18,17 @@ public class StringClass {
 	}
 	
 	/*
-	 * String 에서 괄호를 제거하는 메소드 
+	 * String 에서 괄호를 제거하여 리턴하는 메소드 
 	 */
 	public String removeParenthesesFromString(String str) throws StringIndexOutOfBoundsException{
 		String result = str.substring(str.indexOf("(")+1, str.indexOf(")"));
 		return result;
 	}
 
-	public char getCharFromString(String str, int i) {
+	/*
+	 * String 에서 CharAt 으로 char 리턴하는 메소드
+	 */
+	public char getCharAtFromString(String str, int i) {
 		char result = '\0';
 		try {
 			result = str.charAt(i);
